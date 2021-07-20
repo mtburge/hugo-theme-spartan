@@ -1,14 +1,12 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<div class="mx-auto max-w-screen-md">
+    <h2 class="text-center text-gray-500 mb-2">Posts about</h2>
+    <h1 class="text-3xl font-bold text-center mb-8">
+        <span class="border-b-4 border-yellow-500">{{ .Title }}</span>
+    </h1>
 
-
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ partial "metadata.html" . }}
-    <a class="summary" href="{{ .RelPermalink }}">
-        <p>{{ .Summary }}</p>
-    </a>
-</p>
-{{ end }}
+    {{ range .Pages.ByPublishDate.Reverse }}
+        {{ partial "partials/post.html" . -}}
+    {{ end }}
+</div>
 {{ end }}
