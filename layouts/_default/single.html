@@ -4,7 +4,7 @@
     <div class="flex items-center font-medium text-gray-400 leading-relaxed mb-2 space-x-4 justify-center">
       <time class="" datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2" }}{{ if in (slice 1 21 31) .PublishDate.Day}}st{{ else if in (slice 2 22) .PublishDate.Day}}nd{{ else if in (slice 3 23) .PublishDate.Day}}rd{{ else }}th{{ end }} {{ .PublishDate.Format "January 2006" }}</time>
       <div class="text-gray-400 font-bold">&middot;</div>
-      <div>10 minute read</div>
+      <div>{{ math.Round (div (countwords .Content) 220.0) }} minute read</div>
     </div>
     <div class="text-4xl font-extrabold text-gray-900 leading-snug">{{ .Title }}</div>
 
