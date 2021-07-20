@@ -1,5 +1,5 @@
-<div class="flex items-center">
-  <div class="w-5/12 flex-shrink-0 mr-6">    
+<div class="flex flex-col sm:flex-row items-center">
+  <div class="w-full sm:w-5/12 flex-shrink-0 sm:mr-6">    
     {{ if .Params.Thumbnail }}
       <a href="{{ .RelPermalink }}">
         <img src="{{ .Params.Thumbnail }}" class="rounded">
