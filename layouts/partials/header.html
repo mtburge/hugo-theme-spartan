@@ -1,6 +1,6 @@
 <div class="flex sm:flex-row flex-col items-center w-full">
   <div class="flex-grow flex items-center">
-    <a href="" class="group font-medium transition-colors text-gray-900 hover:text-blue-500 antialiased flex items-center">
+    <a href="{{ .Site.BaseURL }}" class="group font-medium transition-colors text-gray-900 hover:text-blue-500 antialiased flex items-center">
       <span class="brand-font flex font-semibold items-center relative">
         <span>{{ .Site.Title }}</span>
         <span class="h-0.5 w-2/12 bg-blue-300 block bottom-0 left-0 absolute group-hover:w-full transition-all"></span>
@@ -11,13 +11,7 @@
   </div>
 
   <div class="mt-4 sm:mt-0">
-    <ul class="space-x-4 flex items-center uppercase text-xs text-gray-500 font-semibold">
-      <li><a href="#" class="hover:text-blue-500 hover:underline">Posts</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+    {{ partial "menu.html" . -}}
   </div>
   
 
