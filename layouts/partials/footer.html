@@ -1,1 +1,4 @@
-<p class="footer text-center">Copyright (c) {{ now.Format "2006"}} John Doe</p>
+<footer class="text-center py-8 text-xs font-medium text-gray-400 flex items-center flex-col">
+  <div class="mb-2">{{ partial "socials.html" . -}}</div>
+  {{ replace .Site.Copyright "{year}" now.Year }}
+</div>
