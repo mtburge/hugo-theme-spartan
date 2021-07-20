@@ -1,0 +1,17 @@
+{{ define "main"}}
+<div class="mx-auto max-w-screen-md p-8 text-center">
+  <h2 class="text-center text-gray-500 mb-2">Nothing to see here</h2>
+  <h1 class="text-3xl font-bold text-center mb-8">
+      <span class="">Page Not Found</span>
+  </h1>
+
+  <p>Either you're looking for something that doesn't exist, or you've been given a broken link. Either way, whatever it was you were looking for can't be found :(</p>
+
+  <a class="mt-6 text-lg group inline-flex items-center py-2 px-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors rounded font-medium" href="{{ .Site.BaseURL }}">
+    Go home instead
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-all group-hover:-mr-0.5 group-hover:ml-0.5" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+    </svg>
+  </a>
+</div>
+{{ end }}

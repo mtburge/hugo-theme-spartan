@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="mx-auto max-w-screen-md">
+<div class="mx-auto max-w-screen-md p-8">
   <div class="mb-8 text-center">
     <div class="flex items-center font-medium text-gray-400 leading-relaxed mb-2 space-x-4 justify-center">
       <time class="" datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2" }}{{ if in (slice 1 21 31) .PublishDate.Day}}st{{ else if in (slice 2 22) .PublishDate.Day}}nd{{ else if in (slice 3 23) .PublishDate.Day}}rd{{ else }}th{{ end }} {{ .PublishDate.Format "January 2006" }}</time>

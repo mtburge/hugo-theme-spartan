@@ -4,7 +4,11 @@
 {{ $projects := where .Site.RegularPages "Section" "projects" }}
 {{ $pages = .Paginate ($pages) 3 }}
 
-<div class="mx-auto max-w-screen-md space-y-8">
+{{- if (and $.IsHome (eq $pages.PageNumber 1) ) }}
+    {{ partial "partials/hero.html" . -}}
+{{ end }}
+
+<div class="mx-auto max-w-screen-md space-y-8 p-8">
     {{ range $index, $page := $pages.Pages }}
         {{ partial "post.html" . -}}
     {{ end }}
