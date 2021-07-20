@@ -9,7 +9,7 @@
   <div class="flex flex-grow flex-col p-6">
     <div class="flex text-sm mb-2 space-x-6">
       <time class="font-medium">{{ .Date.Format "02 January 2006" }}</time>
-      <div>{{ math.Round (div (countwords .Content) 220.0) }} minute read</div>
+      <div>{{ math.Round (div (countwords .Content) 220.0) }} {{ i18n "minute_read" }}</div>
     </div>
 
     <div class="flex flex-col">
@@ -18,7 +18,7 @@
 
       <div class="my-4">
         <a class="group inline-flex items-center py-2 px-3 bg-gray-100 hover:bg-gray-200 transition-colors rounded text-sm font-medium" href="{{ .RelPermalink }}">
-          Read Post
+          {{ i18n "read_post" }}
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-all group-hover:-mr-0.5 group-hover:ml-0.5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
           </svg>

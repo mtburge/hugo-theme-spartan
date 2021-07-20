@@ -1,0 +1,11 @@
+- id: older_posts
+  translation: "Older Posts"
+
+- id: newer_posts
+  translation: "Newer Posts"
+
+- id: minute_read
+  translation: "minute read"
+
+- id: read_post
+  translation: "Read Post"

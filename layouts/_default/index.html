@@ -2,22 +2,26 @@
 
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ $projects := where .Site.RegularPages "Section" "projects" }}
-{{ $pages = .Paginate ($pages)  }}
+{{ $pages = .Paginate ($pages) 3 }}
 
 <div class="mx-auto max-w-screen-md space-y-8">
-    {{ range $pages.Pages }}
+    {{ range $index, $page := $pages.Pages }}
         {{ partial "post.html" . -}}
     {{ end }}
+    
+    {{- if gt $pages.TotalPages 1 }}
+    <nav class="flex items-center">
+        <div class="w-1/2">
+            {{- if $pages.HasPrev }}
+                <a class="hover:text-yellow-500" href="{{ $pages.Prev.URL }}">← {{ i18n "newer_posts" }}</a>
+            {{- end }}
+        </div>
+        <div class="w-1/2 text-right">
+            {{- if $pages.HasNext }}
+                <a class="hover:text-yellow-500" href="{{ $pages.Next.URL }}">{{ i18n "older_posts" }} →</a>
+            {{- end }}
+        </div>
+      </nav>
+    {{- end }}
 </div>
-
-
-
-<!-- {{ range .Data.Pages }}
-    <div class="post-short-list">
-        <h3>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h3>
-    </div>
-{{ end }} -->
-
 {{ end }}
