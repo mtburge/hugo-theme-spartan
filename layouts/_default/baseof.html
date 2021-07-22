@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-gb">
     {{- partial "head.html" . -}}
     <body class="font-sans antialiased text-gray-700 dark:bg-gray-800 dark:text-gray-200">
-        <div class="p-8 py-4 bg-gray-50 dark:bg-gray-900">
+        <header class="p-8 py-4 bg-gray-50 dark:bg-gray-900">
             {{- partial "header.html" . -}}
-        </div>
-        <div id="content" class="">
+        </header>
+        <main id="content" class="">
         {{- block "main" . }}{{- end }}
-        </div>
+        </main>
         {{- partial "footer.html" . -}}
     </body>
 </html>
