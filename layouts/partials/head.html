@@ -12,18 +12,15 @@
   <link href="{{ .RelPermalink }}" rel="feed" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
   {{ end }}
 
-  {{ if .Description }}
-    <meta name="description" content="{{ .Description }}">
-  {{ end }}
-  
+  <meta name="description" content="{{ if .Params.ogdescription }}{{ .Params.ogdescription }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
   <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
-  <meta name="author" content="{{ .Params.author }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
   {{ hugo.Generator }}
 
   <meta property="og:title" content="{{ if .Params.ogtitle }}{{ .Params.ogtitle }}{{ else }}{{ .Title }}{{ end }}" />
-  <meta property="og:description" content="{{ if .Params.ogdescription }}{{ .Params.ogdescription }}{{ else }}{{ .Description }}{{ end }}" />
-  <meta property="og:type" content="{{ .Params.ogtype }}" />
-  <meta property="og:locale" content="{{ .Params.oglocale }}" />
+  <meta property="og:description" content="{{ if .Params.ogdescription }}{{ .Params.ogdescription }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
+  <meta property="og:type" content="{{ .Site.Params.ogtype }}" />
+  <meta property="og:locale" content="{{ .Site.Params.oglocale }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
   {{ if .Params.ogimage }}
   <meta property="og:image" content="{{ .Params.ogimage }}" />
