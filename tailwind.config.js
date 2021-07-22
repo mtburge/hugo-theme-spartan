@@ -1,7 +1,7 @@
 module.exports = {
   purge: [
-    // './_default/**/*.html',
-    // './layouts/**/*.html',
+    './_default/**/*.html',
+    './layouts/**/*.html',
   ],
   darkMode: 'media',
   theme: {
