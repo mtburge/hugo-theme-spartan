@@ -1,8 +1,28 @@
 <head>
   <meta charset="utf-8">
+  <title>{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/css/spartan.min.css">
-  {{ $title := print .Site.Title " | " .Title }}
-  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
-  <title>{{ $title }}</title>
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+
+  {{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+  <link href="{{ .RelPermalink }}" rel="feed" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+  {{ end }}
+
+  <meta name="description" content="{{ .Description }}">
+  <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
+  <meta name="author" content="{{ .Params.author }}">
+  {{ hugo.Generator }}
+
+  <meta property="og:title" content="{{ if .Params.ogtitle }}{{ .Params.ogtitle }}{{ else }}{{ .Title }}{{ end }}" />
+  <meta property="og:description" content="{{ if .Params.ogdescription }}{{ .Params.ogdescription }}{{ else }}{{ .Description }}{{ end }}" />
+  <meta property="og:type" content="{{ .Params.ogtype }}" />
+  <meta property="og:locale" content="{{ .Params.oglocale }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  {{ if .Params.ogimage }}
+  <meta property="og:image" content="{{ .Params.ogimage }}" />
+  {{ end }}
 </head>
