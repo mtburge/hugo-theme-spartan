@@ -55,6 +55,10 @@ article ol {
   @apply list-decimal ml-10 mb-10
 }
 
+article li {
+  @apply mb-2
+}
+
 article p + ol, article p + ul {
   @apply -mt-4
 }
