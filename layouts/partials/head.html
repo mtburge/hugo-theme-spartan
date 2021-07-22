@@ -12,7 +12,10 @@
   <link href="{{ .RelPermalink }}" rel="feed" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
   {{ end }}
 
-  <meta name="description" content="{{ .Description }}">
+  {{ if .Description }}
+    <meta name="description" content="{{ .Description }}">
+  {{ end }}
+  
   <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
   <meta name="author" content="{{ .Params.author }}">
   {{ hugo.Generator }}
