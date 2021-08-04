@@ -25,4 +25,6 @@
   {{ if .Params.ogimage }}
   <meta property="og:image" content="{{ .Params.ogimage }}" />
   {{ end }}
+
+  {{ partial "headtags.html" . -}}
 </head>
