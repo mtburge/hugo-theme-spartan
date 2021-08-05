@@ -1,8 +1,8 @@
 <div class="flex flex-col sm:flex-row">
   <div class="w-full sm:w-5/12 flex-shrink-0 sm:mr-6 sm:my-6">    
-    {{ if .Params.Images }}
+    {{ if .Params.images }}
       <a href="{{ .RelPermalink }}" class="block h-full">
-        <img src="{{ index (.Params.Images) 0 }}" alt="{{ .Title }}" class="rounded h-full object-cover">
+        <img src="{{ index (.Params.images) 0 }}" alt="{{ .Title }}" class="rounded h-full object-cover">
       </a>
     {{ end }}
   </div>
