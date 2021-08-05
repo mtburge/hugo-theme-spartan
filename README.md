@@ -3,6 +3,8 @@ A clean and minimal theme for [Hugo](https://gohugo.io/), designed for small blo
 
 I built this theme as I wanted a minimal theme, that focused on content and I couldn't find any that matched the look and feel I wanted. As it is focused on content, it may not support all Hugo features. I love [TailwindCSS](https://tailwindcss.com), so it's no surprise I've used that for all its styling goodness.
 
+<p align="center"><img src="https://raw.githubusercontent.com/itsmattburgess/hugo-theme-spartan/main/exampleSite/screenshot.png" alt="Spartan Hugo Theme"></p>
+
 ## See it in action
 Shameless plug to my website: https://mattburgess.dev
 
