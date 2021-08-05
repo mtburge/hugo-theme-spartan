@@ -24,7 +24,12 @@
   <meta property="og:url" content="{{ .Permalink }}" />
   {{ if .Params.ogimage }}
   <meta property="og:image" content="{{ .Params.ogimage }}" />
+  <meta name="twitter:image" content="{{ .Params.ogimage }}" />
   {{ end }}
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}" />
+  <meta name="twitter:site" content="{{ .Site.Params.twitter_username }}" />
 
   {{ partial "headtags.html" . -}}
 </head>
