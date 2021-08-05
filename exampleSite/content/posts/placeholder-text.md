@@ -2,7 +2,8 @@
 title: "Placeholder Text"
 date: "2020-08-05"
 draft: false
-thumbnail: /img/placeholder.png
+images: 
+  - /img/placeholder.png
 tags:
   - markdown
 ---
