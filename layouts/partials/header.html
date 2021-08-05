@@ -1,5 +1,5 @@
-<div class="flex sm:flex-row flex-col items-center w-full">
-  <div class="flex-grow flex items-center">
+<div class="flex flex-wrap items-center w-full -mb-2">
+  <div class="flex flex-grow items-center mb-2">
     <a href="{{ .Site.BaseURL }}" class="group font-medium transition-colors text-gray-900 dark:text-gray-200 hover:text-yellow-500 antialiased flex items-center">
       <span class="flex font-semibold items-center relative">
         <span>{{ .Site.Title }}</span>
@@ -10,7 +10,7 @@
     <div class="ml-4">{{ partial "socials.html" . -}}</div>
   </div>
 
-  <div class="mt-4 sm:mt-0">
+  <div class="mb-2">
     {{ partial "menu.html" . -}}
   </div>
 </div>
