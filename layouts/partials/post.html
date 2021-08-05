@@ -2,7 +2,7 @@
   <div class="w-full sm:w-5/12 flex-shrink-0 sm:mr-6 sm:my-6">    
     {{ if .Params.Images }}
       <a href="{{ .RelPermalink }}" class="block h-full">
-        <img src="{{ index (.Params.Images) 0 }}" alt="{{ .Title }}" class="rounded h-full object-cover">
+        <img src="{{ index (.Params.Images) 0 }}" alt="{{ .Title }}" class="rounded h-full max-h-64 object-cover">
       </a>
     {{ end }}
   </div>
