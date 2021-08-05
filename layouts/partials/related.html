@@ -1,8 +1,8 @@
 <div class="flex flex-row sm:flex-col items-center sm:items-start">
   <div class="w-1/3 sm:w-full flex-shrink-0 mr-4 sm:mr-0">
-    {{ if .Params.Thumbnail }}
+    {{ if .Params.Images }}
       <a href="{{ .RelPermalink }}">
-        <img src="{{ .Params.Thumbnail }}" class="rounded w-full">
+        <img src="{{ index (.Params.Images) 0 }}" class="rounded w-full">
       </a>
     {{ end }}
   </div>
