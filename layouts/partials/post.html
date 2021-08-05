@@ -1,8 +1,8 @@
-<div class="flex flex-col sm:flex-row items-center">
-  <div class="w-full sm:w-5/12 flex-shrink-0 sm:mr-6">    
+<div class="flex flex-col sm:flex-row">
+  <div class="w-full sm:w-5/12 flex-shrink-0 sm:mr-6 sm:my-6">    
     {{ if .Params.Thumbnail }}
-      <a href="{{ .RelPermalink }}">
-        <img src="{{ .Params.Thumbnail }}" alt="{{ .Title }}" class="rounded">
+      <a href="{{ .RelPermalink }}" class="block h-full">
+        <img src="{{ .Params.Thumbnail }}" alt="{{ .Title }}" class="rounded h-full object-cover">
       </a>
     {{ end }}
   </div>
@@ -16,7 +16,7 @@
       <a class="text-xl font-bold text-gray-800 dark:text-gray-200 my-1 hover:text-yellow-500" href="{{ .RelPermalink }}">{{ .Title }}</a>
       <div class="text-sm leading-relaxed">{{ .Summary }}</div>
 
-      <div class="my-4">
+      <div class="mt-4">
         <a class="group inline-flex items-center py-2 px-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors rounded text-sm font-medium" href="{{ .RelPermalink }}">
           {{ i18n "read_post" }}
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-all group-hover:-mr-0.5 group-hover:ml-0.5" viewBox="0 0 20 20" fill="currentColor">
