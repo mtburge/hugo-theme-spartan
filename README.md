@@ -17,14 +17,14 @@ Shameless plug to my website: https://mattburgess.dev
 ## Setup
 Have a look in the `exampleSite` directory for example posts and config files.
 
-```json
-// Use Hugo modules to add the theme as a dependency:
+```console
+# Use Hugo modules to add the theme as a dependency:
 hugo mod init github.com/itsmattburgess/hugo-theme-spartan
 
-// Add the theme to your config.toml file:
+# Add the theme to your config.toml file:
 theme = "hugo-theme-spartan"
 
-// Thats it, start your Hugo development server:
+# Thats it, start your Hugo development server:
 hugo server -D
 ```
 
