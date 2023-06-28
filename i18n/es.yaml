@@ -1,0 +1,11 @@
+- id: older_posts
+  translation: "Publicaciones Recientes"
+
+- id: newer_posts
+  translation: "Publicaciones Nuevas"
+
+- id: minute_read
+  translation: "lectura de un minuto"
+
+- id: read_post
+  translation: "Leer la Publicación"
